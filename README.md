@@ -2,7 +2,7 @@
 基于React/Redux 的一个现实直接调用多引擎API翻译结果（API）
 
 # 效果预览
-http://t.shuxia123.com
+http://t.shuxia123.com (个人服务器比较垃圾，所以比较慢一些)
 
 # 还未完善的
 * Sass未添加Webpack管理（这几天翻墙有些问题，npm sass 装不了，故先独立开发）
