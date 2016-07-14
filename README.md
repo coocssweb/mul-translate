@@ -4,6 +4,9 @@
 # 效果预览
 http://t.shuxia123.com (额！！还没调试其他浏览器，请用Chrome浏览，个人服务器比较垃圾，所以比较慢一些)
 
+![githubusercontent](https://raw.githubusercontent.com/coocssweb/mul-translate/master/preview/preview-1.png "预览1")
+![githubusercontent](https://raw.githubusercontent.com/coocssweb/mul-translate/master/preview/preview-2.png "预览1")  
+
 # 还未完善的
 * Sass未添加Webpack管理（这几天翻墙有些问题，npm sass 装不了，故先独立开发）
 * 测试数据比较单一（服务端API接口未开发完成，当然不影响使用）
@@ -34,9 +37,9 @@ http://t.shuxia123.com (额！！还没调试其他浏览器，请用Chrome浏�
 CSS采用了Compass来开发。命名规范采用B.E.M
 
 # 调试
-> npm start
+> npm start<br />
 > 访问 http://localhost:3030/index.html
 
 # 发布
-> npm run build
+> npm run build<br/>
 >然后将dist目录下的内容发布即可。
