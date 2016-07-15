@@ -1,0 +1,48 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "../../mixin";
+@import "../../variables";
+@import "../../common";
+
+.btn-translate{
+  @extend %btn;
+  margin-top: 7px;
+  border: 1px solid #045bb2;
+  background: $hoverBlue;
+  @include background(linear-gradient(top,#0e7bef,#0d73da));
+  @include box-shadow(0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15));
+  color: #fff;
+  @include text-shadow(0 1px 1px rgba(0,0,0,.12));
+  @include transition(all .2s ease-in-out);
+  margin-left: 20px;
+  &:hover{
+    @include background(linear-gradient(top,#0e7bef,#0e7bef));
+  }
+}
+.input-box{
+  margin-top: 10px;
+  position: relative;
+}
+.input_textarea{
+  display: block;
+  width: 100%;
+  height: 200px;
+  resize: none;
+  outline: none;
+  border: 1px solid $gray;
+  @include box-sizing(border-box);
+  padding: 8px;
+  &:focus{
+    border: 1px solid $blue;
+  }
+}
+.btn-clear{
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  color: #000000;
+  text-decoration: none;
+  &:hover{
+    color: $blue ;
+  }
+}

@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-
+import Style from './index.scss'
 var Index = React.createClass({
     propTypes:{
         isOn: React.PropTypes.bool,

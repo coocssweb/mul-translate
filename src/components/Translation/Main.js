@@ -7,6 +7,7 @@ import Header from './Header.js';
 import TranslationInput from './InputModule/Index.js';
 import TranslationOutput from './OutputModule/Index.js';
 import TranslationResult from './ResultModule/Index.js';
+import Style from './main.scss';
 
 var Main = React.createClass({
     componentDidMount(){

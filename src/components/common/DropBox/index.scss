@@ -1,0 +1,68 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "../../mixin";
+@import "../../variables";
+@import "../../common";
+
+.drop-box{
+  display: inline-block;
+  position: relative;
+}
+.drop-box_button{
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  width: 176px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  &:hover{
+    color: $blue;
+  }
+}
+
+.drop-box_icon{
+  margin-left: 5px;
+}
+.translate_icon{
+  margin:0px 20px 0px 20px;
+}
+.drop-list{
+  position: absolute;
+  width: 600px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  z-index: 4;
+  @include box-sizing(border-box);
+  padding: 20px;
+  top: 40px;
+  &:before{
+    content:'';
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    width: 176px;
+    height: 12px;
+    top: -12px;
+    left: -1px;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+  }
+}
+.drop-item,.drop-item_active{
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0px 10px;
+  margin-right: 5px;
+  color: #000000;
+  text-decoration: none;
+  &:hover{
+    background: #eef2fc;
+  }
+}
+.drop-item_active{
+  background: #eef2fc;
+}

@@ -4,6 +4,8 @@
  */
 
 import React from 'react';
+import xxx from '../../../utils/utils.js';
+import Style from './index.scss';
 
 var Index = React.createClass({
     propTypes:{
@@ -28,7 +30,7 @@ var Index = React.createClass({
         this.props.setCurrentEdit('acceptance');
     },
     onConfirm(){
-        if($.trim(this.state.value)==""){
+        if(xxx.trim(this.state.value)==""){
             return;
         }
         this.props.updateAcceptance(this.state.value);

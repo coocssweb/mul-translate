@@ -3,9 +3,8 @@
  * 功能描述：头部
  */
 import React from 'react';
-
+import Styles from './header.scss';
 var Header = React.createClass({
-
     render(){
         return (
             <div className="header">

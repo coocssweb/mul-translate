@@ -2,6 +2,8 @@
  * Created by 王佳欣欣欣 on 2016/7/13.
  */
 import React from 'react';
+import xxx from '../../../utils/utils.js';
+import Style from './index.scss';
 
 var Index = React.createClass({
     propTypes:{
@@ -30,6 +32,7 @@ var Index = React.createClass({
         this.setState({
             isShow: !this.state.isShow
         })
+        return false;
     },
     onSelect(value){
         this.setState({
@@ -38,6 +41,7 @@ var Index = React.createClass({
         if(typeof this.props.callback == 'function'){
             this.props.callback(value);
         }
+        return false;
     },
     render(){
         return (

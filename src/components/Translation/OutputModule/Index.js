@@ -6,6 +6,7 @@
 import React from 'react';
 import OutputBox from './OutputBox.js';
 import ToggleButton from '../../common/ToggleButton/Index.js';
+import Style from './index.scss';
 
 var Index = React.createClass({
     propTypes: {

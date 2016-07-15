@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import xxx from '../../../utils/utils.js';
+import Style from './index.scss';
 
 var OutputBox = React.createClass({
     propTypes: {
@@ -32,7 +34,7 @@ var OutputBox = React.createClass({
         this.props.setCurrentEdit('');
     },
     onConfirm(){
-        if($.trim(this.state.value)==""){
+        if(xxx.trim(this.state.value)==""){
             return;
         }
         this.props.setCurrentEdit('');

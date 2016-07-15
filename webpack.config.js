@@ -2,8 +2,10 @@
  * webpack 配置文件
  * 配置独立项、入口文件、输出项信息
  */
+var config = require( './project.config');
 var path = require('path');
 var webpack = require('webpack');
+var paths   = config.get('utils_paths');
 
 var config = {
     devtool: 'inline-source-map',
@@ -32,9 +34,24 @@ var config = {
                 path.resolve(__dirname, 'node_modules')
             ],
             loaders: ['style', 'css?modules&localIdentName=[name]_[local]_[hash:base64:5]','autoprefixer?{browsers:["> 5%", "ie 9"]}']
+        },
+        {
+            test: /\.css$/,
+            exclude: [
+                path.resolve(__dirname, 'node_modules')
+            ],
+            loaders: ['style', 'css?modules&localIdentName=[name]_[local]_[hash:base64:5]','autoprefixer?{browsers:["> 5%", "ie 9"]}']
         },{
-            test: /\.(svg|png|jpg|jpeg|gif)$/i,
-            loaders: ['file', 'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false']
+            test    : /\.scss$/,
+            loaders : [
+                'style-loader',
+                'css-loader',
+                'sass-loader?includePaths[]=' + paths.project('node_modules', 'compass-mixins', 'lib')
+            ],
+            include: path.join(__dirname,'/src/')
+        },{
+        test: /\.(svg|png|jpg|jpeg|gif)$/i,
+        loaders: ['file', 'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false']
         },{
             test: /\.json/,
             loaders: ['json']

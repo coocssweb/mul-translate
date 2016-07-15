@@ -5,6 +5,8 @@
 
 import React from 'react';
 import DropBox from '../../common/DropBox/Index.js';
+import xxx from '../../../utils/utils.js';
+import Style from './index.scss';
 
 var Index = React.createClass({
     propTypes:{
@@ -29,7 +31,7 @@ var Index = React.createClass({
         this.props.setLanguageOutput(value);
     },
     onTranslate(e){
-        if($.trim(this.props.value)==""){
+        if(xxx.trim(this.props.value)==""){
             return;
         }
 

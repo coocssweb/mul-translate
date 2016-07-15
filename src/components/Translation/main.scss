@@ -1,0 +1,21 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "../mixin";
+@import "../variables";
+@import "../common";
+
+.main{
+  @extend %wrapper;
+  @include clearfix;
+  margin-top: 30px;
+  @at-root{
+    .main-left{
+      float: left;
+      width: 49%;
+    }
+    .main-right{
+      float: right;
+      width: 49%;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "../../mixin";
+@import "../../variables";
+@import "../../common";
+
+
+.result-module{
+  margin-top: 30px;
+}
+.result_label{
+  color: #666;
+  font-size: 12px;
+}
+.result-read{
+  position: relative;
+}
+.result_word{
+  line-height: 2;
+}
+.btn_result-edit{
+  position: absolute;
+  right: 0px;
+  top:0px;
+  color: #000000;
+  text-decoration: none;
+  &:hover{
+    color: $hoverBlue;
+  }
+}
+.result_word{
+  color: #459f49;
+}
+.result_textarea{
+  width: 100%;
+  @include box-sizing(border-box);
+  padding: 8px;
+  height: 100px;
+  border: 1px solid $gray;
+  outline: 0px;
+  resize: none;
+  &:focus{
+    border: 1px solid $blue;
+  }
+}
+.result-edit_hidden,.result-read_hidden{
+  display: none;
+}
