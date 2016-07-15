@@ -8,8 +8,7 @@
     "build": " webpack -p --config ./webpack.deploy.config.js --progress --profile --colors"
   },
   "repository": {
-    "type": "git",
-    "url": "http://git.sdp.nd/987011/lc-report-system.git"
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +23,7 @@
     "redux": "^3.5.2",
     "redux-router": "^1.0.0-beta8",
     "redux-thunk": "^2.0.1",
-    "rx-lite": "^4.0.8",
-    "underscore": "^1.8.3"
+    "rx-lite": "^4.0.8"
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^0.8.2",

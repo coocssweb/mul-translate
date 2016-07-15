@@ -3,22 +3,18 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
-
 module.exports = {
-    devtool: 'eval',
+    devtool: false,
     entry: {
         index: [
             './src/index.js'
-        ],
-        vendors: ['react', 'jquery', 'react-router']
+        ]
     },
     output: {
         path: path.join(__dirname, '/dist'),
         filename: '[name].js'
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js'),
         new ExtractTextPlugin('index_[contenthash].css', {
             allChunks: true
         }),
@@ -27,6 +23,11 @@ module.exports = {
             template: 'index-template.html',
             inject: 'body'
         }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
@@ -34,11 +35,6 @@ module.exports = {
             output: {
                 comments: false
             }
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery"
         }),
         new webpack.DefinePlugin({
             'process.env': {NODE_ENV: JSON.stringify('production')}
