@@ -26,7 +26,8 @@
     "redux-thunk": "^2.0.1",
     "rx-lite": "^4.0.8",
     "compass-mixins": "^0.12.7",
-    "sass-loader": "^4.0.0"
+    "sass-loader": "^4.0.0",
+    "node-sass": "^3.8.0"
   },
   "devDependencies": {
     "extract-text-webpack-plugin": "^0.8.2",
