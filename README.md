@@ -2,8 +2,6 @@
 基于React/Redux 的一个现实直接调用多引擎API翻译结果（API）
 
 # 效果预览
-http://t.shuxia123.com (额！！还没调试其他浏览器，请用Chrome浏览，个人服务器比较垃圾，所以比较慢一些)
-
 ![githubusercontent](https://raw.githubusercontent.com/coocssweb/mul-translate/master/preview/preview-1.png "预览1")
 ![githubusercontent](https://raw.githubusercontent.com/coocssweb/mul-translate/master/preview/preview-2.png "预览1")  
 
@@ -25,7 +23,7 @@ http://t.shuxia123.com (额！！还没调试其他浏览器，请用Chrome浏�
 3. containers : 容器
 4. middleWare : 中间键
 5. reducers : reducer目录
-6. service : 调用数据服务
+6. api : api层
 
 # 主体逻辑
 用Redux很重要的一点是，规划【reducer树】，这是重中之重<br/>
@@ -34,11 +32,11 @@ http://t.shuxia123.com (额！！还没调试其他浏览器，请用Chrome浏�
 大部分状态放在reducer的好处是，单一数据源化，很容易分析什么哪个状态影响了前端的渲染，同时很容易通多调用action修改reducer来控制前端的渲染。
 
 # CSS开发
-CSS采用了Compass来开发。命名规范采用B.E.M
+命名规范采用B.E.M
 
 # 调试
 > npm start<br />
-> 访问 http://localhost:3030/index.html
+> 访问 http://localhost:8089
 
 # 发布
 > npm run build<br/>

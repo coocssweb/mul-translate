@@ -1,0 +1,21 @@
+/**
+ * Created by zj-db0666 on 2018/10/9.
+ */
+// 加载语种列表
+export const LOAD_LANGUAGES_REQUEST = 'LOAD_LANGUAGES_REQUEST';
+export const LOAD_LANGUAGES_SUCCESS = 'LOAD_LANGUAGES_SUCCESS';
+export const LOAD_LANGUAGES_FAILURE = 'LOAD_LANGUAGES_FAILURE';
+
+// 设置来源语种
+export const SET_SOURCE_LANGUAGE = 'SET_SOURCE_LANGUAGE';
+
+// 设置目标语种
+export const SET_AIM_LANGUAGE = 'SET_AIM_LANGUAGE';
+
+// 提交翻译
+export const TRANSLATE_REQUEST = 'TRANSLATE_REQUEST';
+export const TRANSLATE_SUCCESS = 'TRANSLATE_SUCCESS';
+export const TRANSLATE_FAILURE = 'TRANSLATE_FAILURE';
+
+// 清除翻译结果
+export const CLEAR_RESULT = 'CLEAR_RESULT';

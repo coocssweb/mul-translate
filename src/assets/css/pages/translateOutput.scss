@@ -1,0 +1,93 @@
+.translateOutput{
+    min-height: 112px;
+    position: relative;
+    padding: 10px;
+    &-content{
+        min-height: 78px;
+    }
+
+    &-operate{
+        padding-top: 15px;
+    }
+
+    &-btn{
+        display: inline-block;
+        margin-right: 18px;
+        vertical-align: top;
+    }
+
+    &-sound{
+        width: 21px;
+        height: 21px;
+        padding: 1px 0 0 7px;
+    }
+
+    &-copy{
+        width: 22px;
+        height: 21px;
+        padding-top: 1px;
+        border: 0;
+        outline: medium;
+    }
+
+    &-doublelang{
+        float: right;
+        height: 20px;
+        line-height: 20px;
+        margin: 0 0 0 10px;
+        color: #999;
+        text-decoration: none;
+        span{
+            display: inline-block;
+            vertical-align: top;
+            width: 42px;
+            height: 20px;
+            margin-left: 5px;
+        }
+    }
+
+    &-source{
+        display: none;
+        line-height: 30px;
+        font-size: 24px;
+        color: #85b0ff;
+        &--show{
+            display: block;
+        }
+    }
+
+    &-target{
+        line-height: 30px;
+        font-size: 24px;
+        color: #333;
+    }
+}
+
+.icon{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(//fanyi.bdstatic.com/static/translation/sprite/images/normal/index-sc413d90635_65ba9b0.png);
+
+    &-copy{
+        background-position: 0 -178px;
+        height: 17px;
+        width: 17px;
+    }
+
+    &-sound{
+        background-position: 0 -1046px;
+        height: 17px;
+        width: 19px;
+    }
+
+    &-opcheck{
+        height: 22px;
+        width: 35px;
+        background-position: 0 -617px;
+        &ed{
+            height: 22px;
+            width: 35px;
+            background-position: 0 -649px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.selectBtn{
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    width: 176px;
+    text-align: center;
+
+    &:hover{
+        color: #2e82ff;
+        .selectBtn{
+            &-icon{
+                border-color: #2e82ff transparent transparent;
+                &--up{
+                    border-color: transparent transparent #2e82ff;
+                }
+            }
+        }
+    }
+
+    &-inner{
+        display: inline-block;
+        line-height: 30px;
+        zoom: 1;
+    }
+
+    &-icon{
+        width: 0;
+        height: 0;
+        font-size: 0;
+        border-width: 4px;
+        border-color: #777 transparent transparent;
+        border-style: solid;
+        line-height: 0;
+        margin: 2px 0 0 10px;
+        vertical-align: middle;
+        display: inline-block;
+
+        &--up{
+            margin-bottom: 7px;
+            border-color: transparent transparent #777;
+        }
+    }
+
+    &-text{
+        vertical-align: top;
+        font-size: 14px;
+    }
+    }

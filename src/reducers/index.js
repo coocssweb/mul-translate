@@ -1,16 +1,11 @@
-import { routerStateReducer as router } from 'redux-router';
+/**
+ * Created by zj-db0666 on 2018/10/9.
+ */
+// import { routerStateReducer as router } from 'redux-router';
 import { combineReducers } from 'redux';
-import language from './language.js';
-import wordInput from './wordInput.js';
-import wordOutput from './wordOutput.js';
-import acceptance from './acceptance.js';
-import status from './status.js';
+import languages from './languages';
 
 export default combineReducers({
-    router,
-    language,
-    wordInput,
-    wordOutput,
-    acceptance,
-    status
+    // router,
+    languages
 });

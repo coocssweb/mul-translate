@@ -1,0 +1,58 @@
+.toolbar{
+    max-width: $globalWidth;
+    margin: 0px auto;
+    padding: 30px 0 10px;
+}
+
+.exchange{
+    &-btn{
+        float: left;
+        padding: 0 21px;
+        height: 30px;
+        line-height: 30px;
+        &.toggle{
+            .exchange-icon{
+                background-position: -202px center;
+            }
+        }
+    }
+    &-icon{
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        overflow: hidden;
+        background-image: url(//fanyi.bdstatic.com/static/translation/img/translate/translang/exchange1x_37fd099.png);
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin-top: -4px;
+        background-position: -2px 50%;
+        line-height: 27px;
+    }
+}
+
+.translate{
+    &-btn{
+        background-repeat: no-repeat;
+        background-image: url(//fanyi.bdstatic.com/static/translation/sprite/images/normal/index-sc413d90635_65ba9b0.png);
+        background-position: 0 -1100px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        margin-left: 14px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 30px;
+        letter-spacing: 10px;
+        vertical-align: top;
+        width: 106px;
+        height: 32px;
+        border: 0;
+        padding: 0;
+        background-color: #fff;
+        float: left;
+        &:hover{
+            background-position: 0px  -1142px;
+        }
+    }
+}

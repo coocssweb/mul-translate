@@ -1,0 +1,90 @@
+.languageList{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    float: left;
+    padding: 12px;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    width: 700px;
+    box-sizing: border-box;
+    display: none;
+
+    &--open{
+        display: block;
+    }
+
+    &-cover{
+        width: 176px;
+        height: 13px;
+        position: absolute;
+        left: -1px;
+        top: -13px;
+        background-color: #fff;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+    }
+
+    &-often{
+        overflow: hidden;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin: 0 14px;
+        &-item{
+            float: left;
+            line-height: 2.3;
+            padding: 7px 28px 7px 0;
+        }
+        &-lang{
+            display: inline-block;
+            color: #333;
+            padding: 7px 11px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 12px;
+            border: 1px solid #fff;
+            &:hover, &--selected{
+                background: #eef2fc;
+                border-radius: 1px;
+                border: 1px solid #eef2fc;
+                text-decoration: none;
+            }
+        }
+        &-text{
+            float: right;
+            color: #aaa;
+            padding: 14px 11px;
+            height: 15px;
+            line-height: 15px;
+        }
+
+    }
+
+    &-data{
+        overflow: hidden;
+        padding-bottom: 10px;
+        margin: 0 14px;
+        &-item{
+            float: left;
+            line-height: 2.3;
+            padding: 7px 28px 7px 0;
+        }
+        &-lang{
+            display: inline-block;
+            color: #333;
+            padding: 7px 11px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 12px;
+            border: 1px solid #fff;
+            &:hover, &--selected{
+                background: #eef2fc;
+                border-radius: 1px;
+                border: 1px solid #eef2fc;
+                text-decoration: none;
+            }
+        }
+    }
+}
