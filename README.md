@@ -1,21 +1,6 @@
 # mul-translate
 基于React/Redux 的一个现实直接调用多引擎API翻译结果（API）
 
-# 效果预览
-![githubusercontent](https://raw.githubusercontent.com/coocssweb/mul-translate/master/preview/preview-1.png "预览1")
-![githubusercontent](https://raw.githubusercontent.com/coocssweb/mul-translate/master/preview/preview-2.png "预览1")  
-
-# 还未完善的
-* Sass未添加Webpack管理（这几天翻墙有些问题，npm sass 装不了，故先独立开发）
-* 测试数据比较单一（服务端API接口未开发完成，当然不影响使用）
-* 未考虑响应式（用了两个晚上开发的，开没有考虑响应式，后期完善）
-* 还未完全测试过，所以不敢保证没bug。哈哈
-
-# 目录机构
-### styles
-样式结构，基于compass开发的样式
-### data 
-测试数据目录
 ### src
 代码目录
 1. actions ：action处理
