@@ -37,5 +37,5 @@ export const translate = ({from, to, query}) => {
 export const clearResult = () => {
     return {
         type: CLEAR_RESULT
-    }
-}
+    };
+};

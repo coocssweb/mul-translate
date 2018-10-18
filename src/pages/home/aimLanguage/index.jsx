@@ -13,7 +13,7 @@ class AimLanguage extends Component {
     }
 
     handleClickOutside () {
-        this.props.open && this.props.toggleOpen(false);
+        this.state.open && this.onToggleOpen(false);
     }
 
     onToggleOpen () {
