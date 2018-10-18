@@ -3,8 +3,7 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SourceLanguage from '../sourceLanguage';
-import AimLanguage from '../aimLanguage';
+import SelectBtn from '../selectBtn';
 import className from 'classnames';
 
 class Toolbar extends Component {
@@ -44,19 +43,26 @@ class Toolbar extends Component {
     render () {
         return (
             <div className="toolbar clearfix">
-                <SourceLanguage
+                <SelectBtn
                     languageList={this.props.languageList}
                     sourceOften={this.props.sourceOften}
                     language={this.state.sourceLanguage}
-                    onSetLanguage={this.onSetLanguage.bind(this, 'sourceLanguage')}/>
+                    onSetLanguage={this.onSetLanguage.bind(this, 'sourceLanguage')}>
+                    检测到{this.state.sourceLanguage.name}
+                </SelectBtn>
+
                 <a className={className({'exchange-btn': true, toggle: this.state.exchangeTimes % 2})} href="javascript:void(0);" onClick={this.onExchange.bind(this)}>
                     <span className="exchange-icon" ></span>
                 </a>
-                <AimLanguage
+
+                <SelectBtn
                     languageList={this.props.languageList}
-                    aimOften={this.props.aimOften}
+                    sourceOften={this.props.aimOften}
                     language={this.state.aimLanguage}
-                    onSetLanguage={this.onSetLanguage.bind(this, 'aimLanguage')}/>
+                    onSetLanguage={this.onSetLanguage.bind(this, 'aimLanguage')}>
+                    {this.state.aimLanguage.name}
+                </SelectBtn>
+
                 <a href="javascript:void(0);" className="translate-btn" onClick={this.onTranslate.bind(this)}></a>
             </div>
         );

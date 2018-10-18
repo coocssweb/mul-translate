@@ -18,6 +18,12 @@
         }
     }
 
+    &Wrap{
+        display: inline-block;
+        float: left;
+        position: relative;
+    }
+
     &-inner{
         display: inline-block;
         line-height: 30px;
