@@ -2,6 +2,7 @@
  * 语种 reducer
  * Created by zj-db0666 on 2018/10/9.
  */
+import Immutable from 'immutable';
 
 import {
     SET_SOURCE_LANGUAGE,
@@ -13,7 +14,7 @@ import {
     CLEAR_RESULT
 } from '../constants/actionTypes';
 
-const initialState = {
+const initialState = Immutable.fromJS({
     languageList: [],
     sourceOften: [],
     sourceList: [],
@@ -25,52 +26,41 @@ const initialState = {
         source: '',
         target: ''
     },
-};
+});
 
-const language = (state = initialState, action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
         case LOAD_LANGUAGES_REQUEST:
-            return Object.assign({}, state, {loading: true});
+            return state.set('loading', true);
 
         case LOAD_LANGUAGES_FAILURE:
-            return Object.assign({}, state, {error: true});
+            return state.set('error', true);
 
         case LOAD_LANGUAGES_SUCCESS:
             let result = action.result;
-            return Object.assign({}, state,
-                {
-                    languageList: result.list,
-                    sourceOften: result.sourceOften,
-                    aimOften: result.aimOften,
-                    loading: false,
-                });
+            return state.merge({
+                languageList: result.list,
+                sourceOften: result.sourceOften,
+                aimOften: result.aimOften,
+                loading: false,
+            });
 
         case SET_SOURCE_LANGUAGE:
-            return Object.assign({}, state, {
-                languageSource: action.response
-            });
+            return state.set('languageSource', action.response);
 
         case SET_AIM_LANGUAGE:
-            return Object.assign({}, state, {
-                languageAim: action.response
-            });
+            return state.set('languageAim', action.response);
 
         case TRANSLATE_SUCCESS:
-            return Object.assign({}, state, {
-                output: action.result
-            });
+            return state.set('output', action.result);
 
         case CLEAR_RESULT:
-            return Object.assign({}, state, {
-                output: {
-                    source: '',
-                    target: ''
-                }
+            return state.set('output', {
+                source: '',
+                target: ''
             });
 
         default:
-            return Object.assign({}, state, {});
+            return state;
     }
 };
-
-export default language;

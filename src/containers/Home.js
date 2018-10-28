@@ -6,7 +6,17 @@ import { connect } from 'react-redux';
 import * as languageAction from '../actions/languages.js';
 
 function mapStateToProps (state) {
-    return {...state.languages};
+    let $languages = state.get('languages');
+    return {
+        languageList: $languages.get('languageList').toJS(),
+        sourceOften: $languages.get('sourceOften').toJS(),
+        sourceList: $languages.get('sourceList').toJS(),
+        aimList: $languages.get('aimList').toJS(),
+        aimOften: $languages.get('aimOften').toJS(),
+        loading: $languages.get('loading'),
+        error: $languages.get('error'),
+        output: $languages.get('output')
+    };
 }
 
 function mapDispatchToProps (dispatch) {
